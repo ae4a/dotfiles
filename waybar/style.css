@@ -3,6 +3,7 @@
     border: none;
     border-radius: 2px;
     font-family: JetBrainsMono Nerd Font, FontAwesome;
+    font-weight: 700;
     font-size: 13px;
     min-height: 0;
 }
@@ -147,7 +148,7 @@ label:focus {
 }
 
 #pulseaudio {
-    color: #d27e99;
+    color: #ff5d62;
 }
 
 #pulseaudio.muted {
