@@ -15,12 +15,16 @@ qt6ct/
 Code - OSS/
 Electron/
 fish/
-
+vlc/
+systemd/
 
 dolphinrc
 pavucontrol.ini
 user-dirs.dirs
 user-dirs.locale
+baloofileinformationrc
+filetypesrc
+mimeapps.list
 
 **/.git/
 **/lazy-lock.json
