@@ -8,65 +8,6 @@
     min-height: 0;
 }
 
-window#waybar {
-    background-color: @background;
-    color: @foreground;
-}
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-tooltip {
-    background-color: @background;
-    border: 1px solid @selection;
-}
-
-tooltip label {
-    color: @foreground;
-}
-
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 2px;
-}
-
-button:hover {
-    background-color: inherit;
-    box-shadow: inset 0 -3px @foreground;
-}
-
-#workspaces button {
-    padding: 0 5px;
-    background-color: @background;
-    color: @foreground;
-}
-
-#workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
-    background-image: linear-gradient(0deg, @selection, @background);
-}
-
-#workspaces button.focused {
-    box-shadow: inset 0 -3px @foreground;
-    background-image: linear-gradient(0deg, @selection, @background);
-}
-
-#workspaces button.urgent {
-    background-image: linear-gradient(0deg, @red, @background);
-}
-
-#taskbar button.active {
-    background-image: linear-gradient(0deg, @selection, @background);
-}
-
-#mode {
-    background-color: @background;
-    box-shadow: inset 0 -2px @foreground;
-}
-
 #mpris,
 #custom-weather,
 #clock,
@@ -93,21 +34,68 @@ button:hover {
     margin: 0 4px;
     margin-top: 2px;
 }
+window#waybar {
+    background: @dark-background;
+    color: @foreground;
+    border-bottom: 2px solid @light-light-background;
+}
 
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#window {
+  margin: 0;
+}
+
+tooltip {
+    background: @background;
+    border: 1px solid @selection;
+}
+
+tooltip label {
+    color: @foreground;
+}
+
+button {
+  background: @background;
+}
 #workspaces {
-    margin: 0 4px;
+    margin: 0;
+    background: @light-light-background;
+    padding: 1px;
 }
 
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+#workspaces button {
+    padding: 0 5px;
+    margin: 1px;
+    background: @background;
+    color: @foreground;
 }
 
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#workspaces button.active {
+    background: @background;
+    color: @green;
+    box-shadow: inset 0 0 2px @green;
+}
+
+#workspaces button.urgent {
+    color: @red;
+    box-shadow: inset 0 0 2px @red;
+}
+
+#workspaces button:hover {
+    box-shadow: inset 0 0 4px @foreground;
+}
+
+#mode {
+    background-color: @background;
 }
 
 #clock {
+    margin: 0;
     background-color: @background;
+    border: 2px solid @light-light-background;
     color: @foreground;
 }
 
@@ -127,7 +115,7 @@ label:focus {
 }
 
 #battery {
-    color: #98bb6c; /* Spring green */
+    color: @green; /* Spring green */
 }
 
 #cpu {
