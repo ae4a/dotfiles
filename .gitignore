@@ -17,6 +17,11 @@ Electron/
 fish/
 vlc/
 systemd/
+chromium/
+google-chrome/
+aconfmgr/
+AmneziaVPN.ORG
+solaar/
 
 dolphinrc
 pavucontrol.ini
@@ -25,6 +30,7 @@ user-dirs.locale
 baloofileinformationrc
 filetypesrc
 mimeapps.list
+arkrc
 
 **/.git/
 **/lazy-lock.json
