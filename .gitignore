@@ -37,3 +37,6 @@ arkrc
 **/.git/
 **/lazy-lock.json
 **/.vscode/
+
+hypr/monitor.conf
+

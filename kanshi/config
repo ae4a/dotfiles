@@ -1,14 +1,41 @@
 profile home69 {
   output "BOE 0x0C5F Unknown" mode 1920x1200 position 0,0 scale 1.2
   output "SAC 27P505Q Unknown" mode 2560x1440 position -480,-1440 scale 1
+
+  exec hyprctl keyword workspace 1, monitor:eDP-1
+  exec hyprctl keyword workspace 2, monitor:eDP-1
+  exec hyprctl keyword workspace 3, monitor:eDP-1
+  exec hyprctl keyword workspace 4, monitor:HDMI-A-1
+  exec hyprctl keyword workspace 5, monitor:HDMI-A-1
+  exec hyprctl keyword workspace 6, monitor:HDMI-A-1
+
+  exec ln -f -s ~/.config/hypr/monitors/home69.conf ~/.config/hypr/monitor.conf
 }
 
 profile home {
   output "BOE 0x0C5F Unknown" mode 1920x1200 position 0,0 scale 1.2
   output "AOC 2476WM D24E9BA002797" mode 1920x1080 position -1920,0 scale 1
+
+  exec hyprctl keyword workspace 4, monitor:eDP-1
+  exec hyprctl keyword workspace 5, monitor:eDP-1
+  exec hyprctl keyword workspace 6, monitor:eDP-1
+  exec hyprctl keyword workspace 1, monitor:HDMI-A-1
+  exec hyprctl keyword workspace 2, monitor:HDMI-A-1
+  exec hyprctl keyword workspace 3, monitor:HDMI-A-1
+
+  exec ln -f -s ~/.config/hypr/monitors/home.conf ~/.config/hypr/monitor.conf
 }
 
 profile single {
   output "BOE 0x0C5F Unknown" mode 1920x1200 position 0,0 scale 1.2
+
+  exec hyprctl keyword workspace 1, monitor:eDP-1
+  exec hyprctl keyword workspace 2, monitor:eDP-1
+  exec hyprctl keyword workspace 3, monitor:eDP-1
+  exec hyprctl keyword workspace 4, monitor:eDP-1
+  exec hyprctl keyword workspace 5, monitor:eDP-1
+  exec hyprctl keyword workspace 6, monitor:eDP-1
+
+  exec ln -f -s ~/.config/hypr/monitors/single.conf ~/.config/hypr/monitor.conf
 }
 
