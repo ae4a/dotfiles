@@ -1,9 +1,14 @@
+profile home69 {
+  output "BOE 0x0C5F Unknown" mode 1920x1200 position 0,0 scale 1.2
+  output "SAC 27P505Q Unknown" mode 2560x1440 position -480,-1440 scale 1
+}
+
 profile home {
-  output eDP-1 mode 1920x1200 position 0,0 scale 1.2
-  output HDMI-A-1 mode 1920x1080 position -1920,0 scale 1
+  output "BOE 0x0C5F Unknown" mode 1920x1200 position 0,0 scale 1.2
+  output "AOC 2476WM D24E9BA002797" mode 1920x1080 position -1920,0 scale 1
 }
 
 profile single {
-  output eDP-1 mode 1920x1200 position 0,0 scale 1.2
+  output "BOE 0x0C5F Unknown" mode 1920x1200 position 0,0 scale 1.2
 }
 
