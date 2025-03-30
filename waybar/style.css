@@ -60,32 +60,40 @@ tooltip label {
 button {
   background: @background;
 }
+
 #workspaces {
     margin: 0;
-    background: @light-light-background;
-    padding: 1px;
+    /*background: @light-light-background;*/
+    padding-bottom: 2px;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    margin: 1px;
+    padding: 0 2px;
+    margin: 2px;
     background: @background;
     color: @foreground;
+    border: 2px solid @light-light-background;
+    transition: border-color 0.2s;
 }
 
 #workspaces button.active {
-    background: @background;
-    color: @green;
-    box-shadow: inset 0 0 2px @green;
+    border-color: @foreground;
+    transition: border-color 0.2s;
 }
 
 #workspaces button.urgent {
-    color: @red;
-    box-shadow: inset 0 0 2px @red;
+    border-color: @red;
+    transition: border-color 0.2s;
 }
 
 #workspaces button:hover {
-    box-shadow: inset 0 0 4px @foreground;
+  padding: 0 2px;
+  margin: 2px;
+  background: @light-light-background;
+  color: @foreground;
+  outline: none;
+  box-shadow: none;
+  transition: background-color 0.2s;
 }
 
 #mode {
