@@ -72,10 +72,7 @@
 ;;;; Big Calendar Window
 
 (defwindow calendar
-  :wm-ignore: true
-  :monitor '1'
-  :windowtype "dock"
-  :onlostfocus "eww close calendar" 
+  :stacking "overlay"
   :geometry (geometry :x "20px"
                       :y "415px"
                       :width "240px"

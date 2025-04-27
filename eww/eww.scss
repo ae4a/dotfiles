@@ -12,6 +12,7 @@ $light-light-background: #363646;
 $selection: #98bb6c;
 $selection: #44475a;
 $foreground: #dcd7ba;
+$dark-foreground: #8c8a7d;
 $red: #ff5555;
 $green: #98bb6c;
 $yellow: #e6c384;
@@ -89,17 +90,44 @@ window {
   font-size: 2rem;
 }
 
+// Calendar
+
 .calendar {
-  border-radius: 8px;
+  border-radius: 5px;
+  border: 2px solid $red;
   box-shadow: none;
   border-color: $foreground;
 }
 
 .cal {
-  color: $red;
+  color: $foreground;
+  border: none;
   padding: 5px;
-  padding-bottom: 1px;
+  padding-bottom: 0px;
+
+  &.highlight{
+    background-color: transparent;
+    color: $cyan;
+  }
+
+  &.button:hover {
+    font-weight: bolder;
+    color: $green;
+  }
+  &:selected {
+    color: $red;
+    font-weight: bolder;
+  }
+  
+  &.header {
+    background-color: $dark-background;
+  }
+  
+  &:indeterminate {
+    color: transparentize($foreground, 0.7);
+  }
 }
+
 
 .favs {
   color: #ECEFF4;

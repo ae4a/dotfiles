@@ -27,7 +27,7 @@
 ;;;; Big Calendar Widget
 
 (defwidget cal []
-  (calendar :halign "center" :valign "center" :class "cal" :month 10 :year 2021))
+  (calendar :class "cal"))
 
 ;;;; Small date in mm/dd/yy format
 
