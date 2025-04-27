@@ -27,7 +27,7 @@
     "hyprland/window": {
         "separate-outputs": true
     },
-   "custom/expand": {
+    "custom/expand": {
         "format": " ",
         "tooltip": false
     },
@@ -51,21 +51,21 @@
     "memory": {
         "format": " {}%"
     },
-   "backlight": {
+    "backlight": {
         "format": "{icon}",
         "tooltip-format": "{percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-   "power-profiles-daemon": {
-      "format": "{icon} ",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+    "power-profiles-daemon": {
+        "format": "{icon} ",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
     },
     "pulseaudio": {
         "format": "{icon}",
@@ -78,7 +78,7 @@
             "default": ["", "", ""]
         },
         "scroll-step": 10,
-        "on-click": "pavucontrol",
+        "on-click": "pavucontrol"
     },
     "network": {
         "format": "{icon}",
@@ -102,23 +102,15 @@
             "critical": 10
         },
         "format-icons": {
-          "default": ["", "", "", "", ""],
-          "charging": "",
-          "plugged": ""
+            "default": ["", "", "", "", ""],
+            "charging": "",
+            "plugged": ""
         }
     },
     "clock": {
         "timezone": "Europe/Moscow",
         "format": "{:%F %R}",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "month",
-                    "weeks-pos"     : "right",
-                    "format": {
-                              "days":       "<span color='#f8f8f2'><b>{}</b></span>",
-                              "weekdays":   "<span color='#ffb86c'><b>{}</b></span>",
-                              "today":      "<span color='#f1fa8c'><b><u>{}</u></b></span>"
-                              }
-            }
+        "tooltip": false,
+        "on-click": "eww open calendar --toggle --force-wayland --screen=\"$(hyprctl activeworkspace | grep -m 1 monitorID | grep -o \"[0-9]\")\" --anchor=\"top right\" --pos=\"5x5\""
     }
 }

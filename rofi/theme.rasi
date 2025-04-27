@@ -20,12 +20,14 @@
 
 window {
     location:   center;
+    anchor: center;
     width:      680;
 
     border: 2px;
     padding:    2px;
-    border-color: @urgent-color;
     border-radius: 8px;
+    border-color: @urgent-color;
+    margin: 1px; // Remove artifacts...
 
     background-color:   @bg0;
 }
@@ -33,6 +35,7 @@ window {
 inputbar {
     spacing:    8px;
     padding:    8px;
+    border-radius: 4px;
 
     background-color:   @bg1;
 }
@@ -61,6 +64,7 @@ listview {
 element {
     padding:    8px;
     spacing:    8px;
+    border-radius: 4px;
 }
 
 element normal normal {
