@@ -1,43 +1,6 @@
-blender/
-darktable/
-dconf/
-go/
-gtk-3.0/
-htop/
-kde.org/
-mc/
-neofetch/
-pulse/
-session/
-temp/
-Kitware/
-qt6ct/
-Code - OSS/
-Electron/
-fish/
-vlc/
-systemd/
-chromium/
-google-chrome/
-aconfmgr/
-AmneziaVPN.ORG
-solaar/
-obsidian/
-yay/
-nwg-look/
-
-dolphinrc
-pavucontrol.ini
-user-dirs.dirs
-user-dirs.locale
-baloofileinformationrc
-filetypesrc
-mimeapps.list
-arkrc
-
 **/.git/
 **/lazy-lock.json
 **/.vscode/
 
-hypr/monitor.conf
+.config/hypr/monitor.conf
 
