@@ -1,2 +1,4 @@
 ;;;; Including Window script, which calls everyone else
-(include "eww_windows.yuck")
+(include "windows/windows.yuck")
+(include "widgets/power.yuck")
+

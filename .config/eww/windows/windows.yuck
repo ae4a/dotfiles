@@ -1,7 +1,7 @@
 ; -> WINDOWS FOR EWW WIDGETS <- ;
 
 ;;;; IMPORTS
-(include "eww_widgets.yuck")
+(include "widgets/widgets.yuck")
 
 ;;;; Fetch widget window
 

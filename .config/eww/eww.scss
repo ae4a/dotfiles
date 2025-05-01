@@ -1,24 +1,6 @@
-* {
-  all: unset;
-  font-family: "JetBrains Mono";
+@import 'vars';
 
-}
-
-  // Colors
-$background: #1f1f28;
-$dark-background: #16161d;
-$light-background: #2a2a37;
-$light-light-background: #363646;
-$selection: #98bb6c;
-$selection: #44475a;
-$foreground: #dcd7ba;
-$dark-foreground: #8c8a7d;
-$red: #ff5555;
-$green: #98bb6c;
-$yellow: #e6c384;
-$cyan: #7fb4ca;
-$purple: #938aa9;
-
+@import 'widgets/calendar';
 
 // WINDOW RELATED CSS
 .bg {
@@ -89,45 +71,6 @@ window {
 .appbar{
   font-size: 2rem;
 }
-
-// Calendar
-
-.calendar {
-  border-radius: 5px;
-  border: 2px solid $red;
-  box-shadow: none;
-  border-color: $foreground;
-}
-
-.cal {
-  color: $foreground;
-  border: none;
-  padding: 5px;
-  padding-bottom: 0px;
-
-  &.highlight{
-    background-color: transparent;
-    color: $cyan;
-  }
-
-  &.button:hover {
-    font-weight: bolder;
-    color: $green;
-  }
-  &:selected {
-    color: $red;
-    font-weight: bolder;
-  }
-  
-  &.header {
-    background-color: $dark-background;
-  }
-  
-  &:indeterminate {
-    color: transparentize($foreground, 0.7);
-  }
-}
-
 
 .favs {
   color: #ECEFF4;

@@ -1,0 +1,39 @@
+// Calendar
+
+.calendar {
+  border-radius: 5px;
+  border: 2px solid $red;
+  box-shadow: none;
+  border-color: $foreground;
+}
+
+.cal {
+  color: $foreground;
+  border: none;
+  padding: 5px;
+  padding-bottom: 0px;
+
+  &.highlight{
+    background-color: transparent;
+    color: $cyan;
+  }
+
+  &.button:hover {
+    font-weight: bolder;
+    color: $green;
+  }
+  &:selected {
+    color: $red;
+    font-weight: bolder;
+  }
+  
+  &.header {
+    background-color: $dark-background;
+  }
+  
+  &:indeterminate {
+    color: transparentize($foreground, 0.7);
+  }
+}
+
+
