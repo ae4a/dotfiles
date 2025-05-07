@@ -8,6 +8,9 @@ profile home69 {
   exec hyprctl keyword workspace 4, monitor:HDMI-A-1
   exec hyprctl keyword workspace 5, monitor:HDMI-A-1
   exec hyprctl keyword workspace 6, monitor:HDMI-A-1
+  exec sleep 1
+  exec hyprctl dispatch workspace 4
+  exec hyprctl dispatch workspace 1
 
   exec ln -f -s ~/.config/hypr/monitors/home69.conf ~/.config/hypr/monitor.conf
 }
@@ -22,6 +25,9 @@ profile home {
   exec hyprctl keyword workspace 1, monitor:HDMI-A-1
   exec hyprctl keyword workspace 2, monitor:HDMI-A-1
   exec hyprctl keyword workspace 3, monitor:HDMI-A-1
+  exec sleep 1
+  exec hyprctl dispatch workspace 4
+  exec hyprctl dispatch workspace 1
 
   exec ln -f -s ~/.config/hypr/monitors/home.conf ~/.config/hypr/monitor.conf
 }
