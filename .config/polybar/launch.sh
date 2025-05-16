@@ -1,5 +1,10 @@
 #! /bin/sh
 
-killall -q polybar # Отключение бара, если он включен
-echo "---" | tee -a /tmp/example_bar.log # Просмотр логов
-polybar example >> /tmp/example_bar.log # Запуск бара example и запись его лога
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload example &
+  done
+else
+  polybar --reload example &
+fi
+

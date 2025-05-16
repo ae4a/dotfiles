@@ -26,9 +26,10 @@ alert = #A54242
 disabled = #707880
 
 [bar/example]
+monitor = ${env:MONITOR:}
 width = 100%
 height = 24pt
-radius = 6
+radius = 0
 
 ; dpi = 96
 

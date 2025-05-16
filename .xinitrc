@@ -17,6 +17,8 @@ fi
 # "$xterm" -geometry 80x20+494-0 &
 # exec "$xterm" -geometry 80x66+0+0 -name login
 
+xrandr --output eDP-1 --mode 1920x1200 --pos 1920x0 --output HDMI-1 --mode 1920x1080 --pos 0x0
+
 xrpb ~/.Xresources
 # setxkbmap -option grp:alt_shift_toggle us,ru
 picom -f &
