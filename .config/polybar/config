@@ -82,6 +82,8 @@ tray-spacing = 16pt
 [module/xworkspaces]
 type = internal/xworkspaces
 
+pin-workspaces = true
+
 label-active = %name%
 label-active-background = ${colors.background-alt}
 label-active-underline= ${colors.primary}
