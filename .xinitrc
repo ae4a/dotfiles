@@ -24,4 +24,4 @@ xsetroot -cursor_name left_ptr
 # xrandr --output eDP-1 --mode 1920x1200 --pos 2560x0 --output HDMI-1 --mode 2560x1440 --pos 0x0
 xrandr --output eDP-1 --mode 1920x1200 --pos 320x1440 --output HDMI-1 --mode 2560x1440 --pos 0x0
 # setxkbmap -option grp:alt_shift_toggle us,ru
-exec i3
+exec i3 -c '/home/ae4/.config/i3/config'
