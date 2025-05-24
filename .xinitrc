@@ -17,7 +17,11 @@ fi
 # "$xterm" -geometry 80x20+494-0 &
 # exec "$xterm" -geometry 80x66+0+0 -name login
 
-xrandr --output eDP-1 --mode 1920x1200 --pos 1920x0 --output HDMI-1 --mode 1920x1080 --pos 0x0
+xrdb -merge ~/.Xresources
+
+# xrandr --output eDP-1 --mode 1920x1200 --pos 1920x0 --output HDMI-1 --mode 1920x1080 --pos 0x0
 xsetroot -cursor_name left_ptr
+# xrandr --output eDP-1 --mode 1920x1200 --pos 2560x0 --output HDMI-1 --mode 2560x1440 --pos 0x0
+xrandr --output eDP-1 --mode 1920x1200 --pos 320x1440 --output HDMI-1 --mode 2560x1440 --pos 0x0
 # setxkbmap -option grp:alt_shift_toggle us,ru
 exec bspwm

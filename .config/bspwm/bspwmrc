@@ -19,8 +19,8 @@ case $monitor_count in
 esac
 
 # Wallpaper
-feh --bg-tile ~/wallpapers/wide.png
-# feh --bg-fill ~/wallpapers/Pixel-city.png
+# feh --bg-tile ~/wallpapers/wide.png
+feh --bg-fill ~/wallpapers/Pixel-city.png
 
 # Window
 bspc config border_width         2
