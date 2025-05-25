@@ -3,9 +3,6 @@
 # Hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-# Composer
-picom --config ~/.config/picom/picom.conf  &
-
 # Bind workspace to monitors
 monitor_count=$(xrandr --query | grep "\bconnected" --count)
 case $monitor_count in
@@ -22,7 +19,7 @@ esac
 # feh --bg-tile ~/wallpapers/wide.png
 feh --bg-fill ~/wallpapers/Pixel-city.png
 
-# Window
+# Windows setup
 bspc config border_width         2
 bspc config window_gap           7
 bspc config normal_border_color  "#595959"
@@ -34,6 +31,9 @@ bspc config gapless_monocle      true
 
 bspc config focus_follows_pointer true
 bspc config pointer_modifier    super
+
+# Composer
+picom --config ~/.config/picom/picom.conf  &
 
 # Polybar
 $HOME/.config/polybar/launch.sh
