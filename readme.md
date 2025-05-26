@@ -1,3 +1,6 @@
+In master config is for hyprland
+
+
 ### How to apply config
 
 Clone to home dir
