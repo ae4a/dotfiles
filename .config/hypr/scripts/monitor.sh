@@ -41,14 +41,14 @@ applyHome() {
 
 applyHome69() {
   hyprctl keyword monitor HDMI-A-1, 2560x1440, 0x0, 1
-  hyprctl keyword monitor eDP-1, 1920x1200 480x1440, 1.2
+  hyprctl keyword monitor eDP-1, 1920x1200, 480x1440, 1.2
 
-  hyprctl keyword workspace 4, monitor:HDMI-A-1
-  hyprctl keyword workspace 5, monitor:HDMI-A-1
-  hyprctl keyword workspace 6, monitor:HDMI-A-1
   hyprctl keyword workspace 1, monitor:eDP-1
   hyprctl keyword workspace 2, monitor:eDP-1
   hyprctl keyword workspace 3, monitor:eDP-1
+  hyprctl keyword workspace 4, monitor:HDMI-A-1
+  hyprctl keyword workspace 5, monitor:HDMI-A-1
+  hyprctl keyword workspace 6, monitor:HDMI-A-1
 
   hyprctl dispatch moveworkspacetomonitor 1 0
   hyprctl dispatch moveworkspacetomonitor 2 0
