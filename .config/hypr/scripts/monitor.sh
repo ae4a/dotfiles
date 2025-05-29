@@ -100,7 +100,6 @@ handle() {
   esac
 }
 
-
 # Handle existing monitors
 handleExisting
 
