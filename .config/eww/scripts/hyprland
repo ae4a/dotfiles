@@ -17,9 +17,9 @@ workspaces (){
 
 if [[ $1 == 'workspaces' ]]; then 
     echo "{ \"workspaces\": $(workspaces), \"active\": 1, \"active_empty\": true }"
-    socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
+    socat -u UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
         active=$(eww get workspaces | jq .active)
-        if [[ ${line:0:9} == 'workspace' ]]; then
+        if [[ ${line:0:11} == 'workspace>>' ]]; then
             active=${line:11:2}
         fi
 
@@ -39,7 +39,7 @@ fi
 
 if [[ $1 == 'window' ]]; then 
     window_class
-    socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
+    socat -u UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
         window_class
     done
 fi
