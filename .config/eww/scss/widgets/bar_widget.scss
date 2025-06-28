@@ -55,6 +55,8 @@
 @mixin workspaces() {
     @include button($flat: false, $radii: $panel_button_radius);
     .workspace-btn{
+        label{ font-size: 1.2em; }
+        margin: 5px;
         &.empty{ color: transparentize($fg_color, 0.34); }
         &.occupied{ color: transparentize($fg_color, 0.18); }
         &.active{ color: $fg_color; }
