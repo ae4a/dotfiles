@@ -6,3 +6,6 @@ for ID in $MONITOR_IDS; do
   echo "MONITOR: $ID"
   eww open bar --id $ID --arg monitor-id="$ID"
 done
+
+# update brightness
+~/.config/eww/scripts/set_light.sh

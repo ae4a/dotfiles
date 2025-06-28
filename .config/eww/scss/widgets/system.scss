@@ -1,0 +1,32 @@
+.system-value {
+  background-color: $light-light-background;
+  color: $foreground;
+  margin-right: 10px;
+}
+
+.icon {
+  &.cpu {
+    padding-left: 7px;
+  }
+  &.mem {
+    padding-left: 9px;
+  }
+  &.light {
+    padding-left: 10px;
+  }
+  &.temperature {
+    padding-left: 10px;
+  }
+}
+
+.cpu {
+  color: $red;
+}
+
+.mem {
+  color: $yellow;
+}
+
+.temperature {
+  color: $green;
+}

@@ -1,6 +1,7 @@
 (include "./yuck/widgets/clock.yuck")
 (include "./yuck/widgets/window.yuck")
 (include "./yuck/widgets/workspaces.yuck")
+(include "./yuck/widgets/system.yuck")
 
 (defwindow bar [monitor-id]
   :exclusive true
@@ -26,6 +27,8 @@
       :space-evenly false
       :halign "end"
       ;; Widgets
+      (brightness)
+      (system-info)
       (clock)
     )
   )

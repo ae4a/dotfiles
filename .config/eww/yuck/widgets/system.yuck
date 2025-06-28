@@ -1,0 +1,57 @@
+(defwidget system-value [value css icon]
+  (circular-progress
+    :class "system-value ${css}"
+    :value value
+    :start-at 25
+    :clockwise true
+    :thickness 2.4
+    (overlay
+        :valign "center"
+        :halign "center"
+        (label :class "icon ${css}" :text icon)
+    )
+  )
+)
+
+(defwidget system-info []
+  (box
+    (system-value
+      :css "cpu"
+      :icon " "
+      :value {EWW_CPU.avg}
+    )
+    (system-value
+      :css "mem"
+      :icon " "
+      :value {100*EWW_RAM.used_mem/EWW_RAM.total_mem}
+    )
+    (system-value
+      :css "temperature"
+      :icon " "
+      :value {EWW_TEMPS.CORETEMP_CORE_0}
+    )
+
+  )
+)
+
+(defvar brightness 50)
+
+(defwidget brightness []
+  (eventbox
+    :onscroll "scripts/set_light.sh {}"
+    :onclick "brightnessctl set 100%"
+    (circular-progress
+      :class "system-value light"
+      :value {brightness / 960.0} ;; TODO remove this shit
+      :start-at 25
+      :clockwise true
+      :thickness 2.4
+      (overlay
+          :valign "center"
+          :halign "center"
+          (label :class "icon light" :text " ")
+      )
+    )
+  )
+)
+
