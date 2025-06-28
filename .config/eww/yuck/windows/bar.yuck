@@ -1,4 +1,5 @@
 (include "./yuck/widgets/clock.yuck")
+(include "./yuck/widgets/window.yuck")
 (include "./yuck/widgets/workspaces.yuck")
 
 (defwindow bar [monitor-id]
@@ -18,6 +19,7 @@
     (box
       :class "centerBar"
       ;; Widgets
+      (active_window)
     )
     (box
       :class "rightBar"
