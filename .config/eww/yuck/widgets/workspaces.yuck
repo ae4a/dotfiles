@@ -1,0 +1,14 @@
+(deflisten active_workspace `scripts/active_workspace.sh`)
+(deflisten list_workspaces "scripts/workspaces.sh")
+
+(defwidget workspaces [monitor-id]
+  (box
+    :class "workspaces"
+    (for workspace in {jq(list_workspaces, '[.[] | select(.monitorID == ${monitor-id})] | sort_by(.id)')}
+      (box
+        :class "workspaces button ${workspace.id == active_workspace ? "current" : ""}"
+        {workspace.name}
+      )
+    )
+  )
+)
