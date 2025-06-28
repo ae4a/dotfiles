@@ -8,6 +8,12 @@
     padding-left: 6px;
     padding-right: 6px;
 
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $light-light-background;
+    }
+
     &.current {
       border-color: $foreground;
       font-weight: bold;

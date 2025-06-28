@@ -5,9 +5,11 @@
   (box
     :class "workspaces"
     (for workspace in {jq(list_workspaces, '[.[] | select(.monitorID == ${monitor-id})] | sort_by(.id)')}
-      (box
+      (button
         :class "workspaces button ${workspace.id == active_workspace ? "current" : ""}"
-        {workspace.name}
+        :onclick "hyprctl dispatch workspace ${workspace.id}"
+        :valign "center"
+        (label :text {workspace.name})
       )
     )
   )
