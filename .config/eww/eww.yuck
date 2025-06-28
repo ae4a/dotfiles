@@ -1,0 +1,2 @@
+(defpoll day_time :interval "5s" `date "+%H:%M"`)
+(include "./yuck/windows/bar.yuck")

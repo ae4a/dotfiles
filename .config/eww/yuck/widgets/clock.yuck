@@ -1,0 +1,6 @@
+(defwidget clock []
+  (box
+    :class "clock"
+    day_time
+  )
+)
