@@ -4,7 +4,7 @@
     :value value
     :start-at 25
     :clockwise true
-    :thickness 2.4
+    :thickness 3
     (overlay
         :valign "center"
         :halign "center"
@@ -17,17 +17,17 @@
   (box
     (system-value
       :css "cpu"
-      :icon " "
+      :icon " "
       :value {EWW_CPU.avg}
     )
     (system-value
       :css "mem"
-      :icon " "
+      :icon " "
       :value {100*EWW_RAM.used_mem/EWW_RAM.total_mem}
     )
     (system-value
       :css "temperature"
-      :icon " "
+      :icon " "
       :value {EWW_TEMPS.CORETEMP_CORE_0}
     )
 
