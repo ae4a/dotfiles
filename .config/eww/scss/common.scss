@@ -4,3 +4,9 @@
   font-family:   "JetBrains Mono Nerd Font";
   color: $foreground;
 }
+
+tooltip {
+  background-color: $background;
+  border: 2px solid $light-light-background;
+  border-radius: 5px;
+}

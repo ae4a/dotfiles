@@ -1,0 +1,17 @@
+(defwindow volume-popup []
+  :stacking "overlay"
+  :namespace "eww_bar_popup"
+  :geometry (geometry :x "80px" :y "5px" :width "5px" :height "80px" :anchor "top right")
+  (box 
+    :orientation "v"
+    :class "volume-scale"
+    (scale 
+      :min 0
+      :max 60
+      :value 30
+      :flipped true
+      :orientation "v"
+      :onchange ""
+    )
+  )
+)

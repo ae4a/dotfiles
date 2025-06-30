@@ -1,14 +1,15 @@
-(defwidget system-value [value css icon]
+(defwidget system-value [value css tooltip]
   (circular-progress
     :class "system-value ${css}"
     :value value
     :start-at 25
     :clockwise true
     :thickness 3
+    :tooltip tooltip
     (overlay
         :valign "center"
         :halign "center"
-        (label :class "icon ${css}" :text icon)
+        (label :class "icon ${css}" :text " ")
     )
   )
 )
@@ -17,20 +18,24 @@
   (box
     (system-value
       :css "cpu"
-      :icon " "
       :value {EWW_CPU.avg}
+      :tooltip "cpu: ${round(EWW_CPU.avg, 0)}%"
     )
     (system-value
       :css "mem"
-      :icon " "
       :value {100*EWW_RAM.used_mem/EWW_RAM.total_mem}
+      :tooltip "Memory: ${round(100*EWW_RAM.used_mem/EWW_RAM.total_mem, 0)}%"
     )
     (system-value
-      :css "temperature"
-      :icon " "
-      :value {EWW_TEMPS.CORETEMP_CORE_0}
+      :css "battery"
+      :value {EWW_BATTERY.BAT0.capacity}
+      :tooltip "Battery: ${EWW_BATTERY.BAT0.capacity}%"
     )
-
+    ;; (system-value
+    ;;   :css "temperature"
+    ;;   :value {EWW_TEMPS.CORETEMP_CORE_0}
+    ;;   :tooltip "Temp ${round(EWW_TEMPS.CORETEMP_CORE_0, 0)}'C"
+    ;; )
   )
 )
 

@@ -1,3 +1,5 @@
+(defpoll day_time :interval "5s" `date "+%H:%M"`)
+
 (defwidget clock []
   (box
     :class "clock"

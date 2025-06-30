@@ -2,6 +2,7 @@
 (include "./yuck/widgets/window.yuck")
 (include "./yuck/widgets/workspaces.yuck")
 (include "./yuck/widgets/system.yuck")
+(include "./yuck/widgets/audio.yuck")
 
 (defwindow bar [monitor-id]
   :exclusive true
@@ -27,8 +28,9 @@
       :space-evenly false
       :halign "end"
       ;; Widgets
-      (brightness)
-      (system-info)
+      ;;(brightness)
+      (audio)
+      ;; (system-info)
       (clock)
     )
   )
