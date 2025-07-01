@@ -1,11 +1,13 @@
-.volume-scale scale trough highlight {
+.scale-popup scale trough highlight {
   all: unset;
   background-color: $foreground;
   color: #000000;
   border-radius: 10px;
+
 }
 
-.volume-scale scale trough {
+
+.scale-popup scale trough {
   all: unset;
   background-color: $light-background;
   border-radius: 10px;
@@ -15,3 +17,12 @@
   border: 3px solid $dark-background;
 }
 
+// popup specific
+
+.volume scale trough highlight {
+  background-color: $green;
+}
+
+.brightness scale trough highlight {
+  background-color: $yellow;
+}

@@ -39,24 +39,3 @@
   )
 )
 
-(defvar brightness 50)
-
-(defwidget brightness []
-  (eventbox
-    :onscroll "scripts/set_light.sh {}"
-    :onclick "brightnessctl set 100%"
-    (circular-progress
-      :class "system-value light"
-      :value {brightness / 960.0} ;; TODO remove this shit
-      :start-at 25
-      :clockwise true
-      :thickness 2.4
-      (overlay
-          :valign "center"
-          :halign "center"
-          (label :class "icon light" :text " ")
-      )
-    )
-  )
-)
-

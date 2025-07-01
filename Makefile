@@ -1,4 +1,4 @@
-default: volume
+default: bar
 
 bar:
 	eww close-all

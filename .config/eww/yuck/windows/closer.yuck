@@ -1,8 +1,8 @@
-(defwindow closer [monitor popup]
+(defwindow closer [monitor]
   :monitor monitor
   :geometry (geometry :width "100%" :height "100%")
   :stacking "fg"
-  (eventbox :onclick "scripts/popup.sh close ${popup}"))
+  (eventbox :onclick "scripts/popup.sh close"))
 
 (defwindow test-popup
   :monitor 0

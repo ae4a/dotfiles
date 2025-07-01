@@ -1,5 +1,0 @@
-(defvar volume 0)
-
-(defwidget audio []
-  "Volume ${volume}%"
-)

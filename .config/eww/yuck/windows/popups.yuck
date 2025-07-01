@@ -1,17 +1,42 @@
+; popup window are required to have 'popup' in their names - it affects their behaviour
+
+(defwidget slider-popup [css min max value onchange]
+  (box 
+    :orientation "v"
+    :class "scale-popup ${css}"
+    (scale 
+      :min min
+      :max max
+      :value value
+      :flipped true
+      :orientation "v"
+      :onchange onchange
+    )
+  )
+)
+
 (defwindow volume-popup []
   :stacking "overlay"
   :namespace "eww_bar_popup"
-  :geometry (geometry :x "80px" :y "5px" :width "5px" :height "80px" :anchor "top right")
-  (box 
-    :orientation "v"
-    :class "volume-scale"
-    (scale 
-      :min 0
-      :max 60
-      :value 30
-      :flipped true
-      :orientation "v"
-      :onchange ""
-    )
+  :geometry (geometry :x "71px" :y "5px" :width "5px" :height "80px" :anchor "top right")
+  (slider-popup
+    :css "volume"
+    :min 0
+    :max 50
+    :value {volume * 50}
+    :onchange 'wpctl set-volume @DEFAULT_AUDIO_SINK@ $(echo "scale=2 ; {} / 50" | bc)'
+  )
+)
+
+(defwindow brightness-popup []
+  :stacking "overlay"
+  :namespace "eww_bar_popup"
+  :geometry (geometry :x "98px" :y "5px" :width "5px" :height "80px" :anchor "top right")
+  (slider-popup
+    :css "brightness"
+    :min 0
+    :max 50
+    :value {brightness*50/brightnessMax}
+    :onchange 'brightnessctl set -q $(echo "scale=2 ; {} / 50 * ${brightnessMax}" | bc)'
   )
 )
