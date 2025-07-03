@@ -1,7 +1,7 @@
 // Audio
 
 .volume-button-label {
-  color: $green;
+  color: $purple;
 }
 
 // Brightness
@@ -16,6 +16,7 @@
 }
 
 // Wifi
+
 .wifi-button.disconnected {
   padding-left: 5px;
   padding-right: 1px;
@@ -27,4 +28,20 @@
   &.disconnected {
     color: $red;
   }
+}
+
+// Battery
+
+.battery-button {
+  padding-left: 8px;
+  padding-right: 8px;
+
+  &.charging {
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+}
+
+.battery-button-label {
+  color: $green;
 }

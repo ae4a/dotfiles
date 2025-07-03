@@ -56,3 +56,42 @@
     )
   )
 )
+
+; Battery
+(defpoll batCapacity :interval "1s" :initial 100 "scripts/battery.sh capacity")
+(defpoll batStatus :interval "1s" "scripts/battery.sh status")
+
+
+(defwidget battery []
+  (button
+    :class "battery-button ${batStatus == "Discharging" ? "" : "charging"}"
+    :onclick "eww poll batCapacity; eww poll batStatus"
+    :tooltip "Capaicity ${batCapacity}%, ${batStatus}"
+    (label
+      :class "battery-button-label ${batStatus == "Discharging" ? "" : "charging"} ${batCapacity <= 20 ? "low" : ""}"
+      :text {batStatus == "Discharging" ?
+      (batCapacity <= 10 ? "󰁺" :
+      (batCapacity <= 10 ? "󰁻" :
+      (batCapacity <= 10 ? "󰁼" :
+      (batCapacity <= 10 ? "󰁽" :
+      (batCapacity <= 10 ? "󰁾" :
+      (batCapacity <= 10 ? "󰁿" :
+      (batCapacity <= 10 ? "󰂀" :
+      (batCapacity <= 10 ? "󰂁" :
+      (batCapacity <= 10 ? "󰂂" :
+      "󰁹"))))))))) :
+      (batCapacity <= 10 ? "󰢜 " :
+      (batCapacity <= 10 ? "󰂆 " :
+      (batCapacity <= 10 ? "󰂇 " :
+      (batCapacity <= 10 ? "󰂈 " :
+      (batCapacity <= 10 ? "󰢝 " :
+      (batCapacity <= 10 ? "󰂉 " :
+      (batCapacity <= 10 ? "󰢞 " :
+      (batCapacity <= 10 ? "󰂊 " :
+      (batCapacity <= 10 ? "󰂋 " :
+      "󰂅 ")))))))))
+      }
+
+    )
+  )
+)

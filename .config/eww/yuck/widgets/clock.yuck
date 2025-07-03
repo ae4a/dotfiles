@@ -1,8 +1,10 @@
 (defpoll day_time :interval "5s" `date "+%H:%M"`)
+(defpoll full_time :interval "1s" :run-while time-visible `date "+%F %T"`)
 
 (defwidget clock []
   (box
     :class "clock"
+    :tooltip full_time
     day_time
   )
 )
