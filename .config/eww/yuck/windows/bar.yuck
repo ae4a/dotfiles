@@ -29,6 +29,7 @@
       :halign "end"
       ;; Widgets
       ;;(brightness)
+      (wifi)
       (brightness :monitor monitor-id)
       (audio :monitor monitor-id)
       ;; (system-info)

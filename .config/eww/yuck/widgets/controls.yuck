@@ -40,3 +40,19 @@
     )
   )
 )
+
+; Wifi
+
+(defvar connectedNetwork "") ; If empty means no network is connected
+
+(defwidget wifi []
+  (button
+    :class "wifi-button ${connectedNetwork == "" ? "disconnected" : ""}"
+    :onclick "nmcli dev wifi rescan"
+    :tooltip {connectedNetwork == "" ? "Wifi is disconnected" : connectedNetwork}
+    (label
+      :class "wifi-button-label ${connectedNetwork == "" ? "disconnected" : ""}"
+      :text {connectedNetwork == "" ? " " : " "}
+    )
+  )
+)

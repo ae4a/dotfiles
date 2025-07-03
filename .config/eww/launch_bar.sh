@@ -9,3 +9,4 @@ done
 # scripts that update variables
 ~/.config/eww/scripts/audio.sh &
 ~/.config/eww/scripts/brightness.sh &
+~/.config/eww/scripts/wifi.sh &

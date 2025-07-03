@@ -1,6 +1,10 @@
+// Audio
+
 .volume-button-label {
   color: $green;
 }
+
+// Brightness
 
 .brightness-button {
   padding-left: 5px;
@@ -9,4 +13,18 @@
 
 .brightness-button-label {
   color: $yellow;
+}
+
+// Wifi
+.wifi-button.disconnected {
+  padding-left: 5px;
+  padding-right: 1px;
+}
+
+.wifi-button-label {
+  color: $cyan;
+
+  &.disconnected {
+    color: $red;
+  }
 }
