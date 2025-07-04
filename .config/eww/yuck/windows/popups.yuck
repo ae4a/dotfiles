@@ -35,8 +35,8 @@
   (slider-popup
     :css "brightness"
     :min 0
-    :max 50
-    :value {brightness*50/brightnessMax}
-    :onchange 'brightnessctl set -q $(echo "scale=2 ; {} / 50 * ${brightnessMax}" | bc)'
+    :max 10
+    :value {brightness*10/brightnessMax}
+    :onchange 'brightnessctl set -q $(echo "scale=2 ; {} / 10 * ${brightnessMax}" | bc)'
   )
 )

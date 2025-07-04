@@ -26,11 +26,11 @@
       :value {100*EWW_RAM.used_mem/EWW_RAM.total_mem}
       :tooltip "Memory: ${round(100*EWW_RAM.used_mem/EWW_RAM.total_mem, 0)}%"
     )
-    (system-value
-      :css "battery"
-      :value {EWW_BATTERY.BAT0.capacity}
-      :tooltip "Battery: ${EWW_BATTERY.BAT0.capacity}%"
-    )
+    ; (system-value
+    ;   :css "battery"
+    ;   :value {EWW_BATTERY.BAT0.capacity}
+    ;   :tooltip "Battery: ${EWW_BATTERY.BAT0.capacity}%"
+    ; )
     ;; (system-value
     ;;   :css "temperature"
     ;;   :value {EWW_TEMPS.CORETEMP_CORE_0}

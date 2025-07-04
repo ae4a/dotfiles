@@ -1,5 +1,7 @@
 #!/bin/bash
 
+eww daemon
+
 MONITOR_IDS=$(hyprctl monitors -j | jq -r '.[].id')
 
 for ID in $MONITOR_IDS; do

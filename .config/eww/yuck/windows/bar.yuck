@@ -28,12 +28,11 @@
       :space-evenly false
       :halign "end"
       ;; Widgets
-      ;;(brightness)
+      ;; (system-info)
       (battery)
       (wifi)
       (brightness :monitor monitor-id)
       (audio :monitor monitor-id)
-      ;; (system-info)
       (clock)
     )
   )

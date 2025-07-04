@@ -1,8 +1,8 @@
-(deflisten get_active_window `scripts/active_window.sh`)
+(deflisten get_active_window :initial "" `scripts/active_window.sh`)
 
 (defwidget active_window []
   (box
     :class "active_window"
-    get_active_window
+    {get_active_window == "null" ? "" : get_active_window}
   )
 )
