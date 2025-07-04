@@ -15,24 +15,25 @@
     (box
       :class "leftBar"
       :space-evenly false
-      ;; Widgets
+      ; Widgets
       (workspaces :monitor-id monitor-id)
     )
     (box
       :class "centerBar"
-      ;; Widgets
+      ; Widgets
       (active_window)
     )
     (box
       :class "rightBar"
       :space-evenly false
       :halign "end"
-      ;; Widgets
-      ;; (system-info)
-      (battery)
-      (wifi)
-      (brightness :monitor monitor-id)
+      ; Widgets
+      ; (system-info)
+      ; Based on position of controls their popups position also is needed to be adjusted at popups.yuck in geometry node
       (audio :monitor monitor-id)
+      (brightness :monitor monitor-id)
+      (wifi)
+      (battery)
       (clock)
     )
   )

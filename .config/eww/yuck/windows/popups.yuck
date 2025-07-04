@@ -18,7 +18,7 @@
 (defwindow volume-popup []
   :stacking "overlay"
   :namespace "eww_bar_popup"
-  :geometry (geometry :x "71px" :y "5px" :width "5px" :height "80px" :anchor "top right")
+  :geometry (geometry :x "168px" :y "5px" :width "5px" :height "80px" :anchor "top right")
   (slider-popup
     :css "volume"
     :min 0
@@ -31,7 +31,7 @@
 (defwindow brightness-popup []
   :stacking "overlay"
   :namespace "eww_bar_popup"
-  :geometry (geometry :x "98px" :y "5px" :width "5px" :height "80px" :anchor "top right")
+  :geometry (geometry :x "139px" :y "5px" :width "5px" :height "80px" :anchor "top right")
   (slider-popup
     :css "brightness"
     :min 0
