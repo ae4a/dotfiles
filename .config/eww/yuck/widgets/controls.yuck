@@ -71,24 +71,24 @@
       :class "battery-button-label ${batStatus == "Discharging" ? "" : "charging"} ${batCapacity <= 20 ? "low" : ""}"
       :text {batStatus == "Discharging" ?
       (batCapacity <= 10 ? "󰁺" :
-      (batCapacity <= 10 ? "󰁻" :
-      (batCapacity <= 10 ? "󰁼" :
-      (batCapacity <= 10 ? "󰁽" :
-      (batCapacity <= 10 ? "󰁾" :
-      (batCapacity <= 10 ? "󰁿" :
-      (batCapacity <= 10 ? "󰂀" :
-      (batCapacity <= 10 ? "󰂁" :
-      (batCapacity <= 10 ? "󰂂" :
+      (batCapacity <= 20 ? "󰁻" :
+      (batCapacity <= 30 ? "󰁼" :
+      (batCapacity <= 40 ? "󰁽" :
+      (batCapacity <= 50 ? "󰁾" :
+      (batCapacity <= 60 ? "󰁿" :
+      (batCapacity <= 70 ? "󰂀" :
+      (batCapacity <= 80 ? "󰂁" :
+      (batCapacity <= 90 ? "󰂂" :
       "󰁹"))))))))) :
       (batCapacity <= 10 ? "󰢜 " :
-      (batCapacity <= 10 ? "󰂆 " :
-      (batCapacity <= 10 ? "󰂇 " :
-      (batCapacity <= 10 ? "󰂈 " :
-      (batCapacity <= 10 ? "󰢝 " :
-      (batCapacity <= 10 ? "󰂉 " :
-      (batCapacity <= 10 ? "󰢞 " :
-      (batCapacity <= 10 ? "󰂊 " :
-      (batCapacity <= 10 ? "󰂋 " :
+      (batCapacity <= 20 ? "󰂆 " :
+      (batCapacity <= 30 ? "󰂇 " :
+      (batCapacity <= 40 ? "󰂈 " :
+      (batCapacity <= 50 ? "󰢝 " :
+      (batCapacity <= 60 ? "󰂉 " :
+      (batCapacity <= 70 ? "󰢞 " :
+      (batCapacity <= 80 ? "󰂊 " :
+      (batCapacity <= 90 ? "󰂋 " :
       "󰂅 ")))))))))
       }
 
