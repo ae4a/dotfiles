@@ -1,0 +1,97 @@
+; Audio
+
+(defvar volume 0)
+
+(defwidget audio [monitor]
+  (button
+    :class "volume-button"
+    :onclick "scripts/popup.sh open volume-popup ${monitor} &"
+    :tooltip "${volume*100}%"
+    (label
+      :class "volume-button-label"
+      :text {volume >= 0.5 ? " " : (volume >= 0.1 ? " " : " ")}
+    )
+  )
+)
+
+; Brightness
+
+(defvar brightness 1) ; Will be updated every time brightness is set
+(defvar brightnessMax 1) ; Will be set once after program start
+
+(defwidget brightness [monitor]
+  (button
+    :class "brightness-button"
+    :onclick "scripts/popup.sh open brightness-popup ${monitor} &"
+    :tooltip "${brightness*100/brightnessMax}%"
+    (label
+      :class "brightness-button-label"
+      :text {brightness == 0 ? "󰛩 " :
+            (brightness <= brightnessMax * 0.1 ? "󱩎 " :
+            (brightness <= brightnessMax * 0.2 ? "󱩏 " :
+            (brightness <= brightnessMax * 0.3 ? "󱩐 " :
+            (brightness <= brightnessMax * 0.4 ? "󱩑 " :
+            (brightness <= brightnessMax * 0.5 ? "󱩒 " :
+            (brightness <= brightnessMax * 0.6 ? "󱩓 " :
+            (brightness <= brightnessMax * 0.7 ? "󱩔 " :
+            (brightness <= brightnessMax * 0.8 ? "󱩕 " :
+            (brightness <= brightnessMax * 0.9 ? "󱩖 " :
+            "󰛨 ")))))))))}
+    )
+  )
+)
+
+; Wifi
+
+(defvar connectedNetwork "") ; If empty means no network is connected
+
+(defwidget wifi []
+  (button
+    :class "wifi-button ${connectedNetwork == "" ? "disconnected" : ""}"
+    :onclick "nmcli dev wifi rescan"
+    :tooltip {connectedNetwork == "" ? "Wifi is disconnected" : connectedNetwork}
+    (label
+      :class "wifi-button-label ${connectedNetwork == "" ? "disconnected" : ""}"
+      :text {connectedNetwork == "" ? " " : " "}
+    )
+  )
+)
+
+; Battery
+(defpoll batCapacity :interval "1s" :initial 100 "scripts/battery.sh capacity")
+(defpoll batStatus :interval "1s" "scripts/battery.sh status")
+
+
+(defwidget battery []
+  (button
+    :class "battery-button ${batStatus == "Discharging" ? "" : "charging"}"
+    :onclick "eww poll batCapacity; eww poll batStatus"
+    :tooltip "Capaicity ${batCapacity}%, ${batStatus}"
+    (label
+      :class "battery-button-label ${batStatus == "Discharging" ? "" : "charging"} ${batCapacity <= 20 ? "low" : ""}"
+      :text {batStatus == "Discharging" ?
+      (batCapacity <= 10 ? "󰁺" :
+      (batCapacity <= 20 ? "󰁻" :
+      (batCapacity <= 30 ? "󰁼" :
+      (batCapacity <= 40 ? "󰁽" :
+      (batCapacity <= 50 ? "󰁾" :
+      (batCapacity <= 60 ? "󰁿" :
+      (batCapacity <= 70 ? "󰂀" :
+      (batCapacity <= 80 ? "󰂁" :
+      (batCapacity <= 90 ? "󰂂" :
+      "󰁹"))))))))) :
+      (batCapacity <= 10 ? "󰢜 " :
+      (batCapacity <= 20 ? "󰂆 " :
+      (batCapacity <= 30 ? "󰂇 " :
+      (batCapacity <= 40 ? "󰂈 " :
+      (batCapacity <= 50 ? "󰢝 " :
+      (batCapacity <= 60 ? "󰂉 " :
+      (batCapacity <= 70 ? "󰢞 " :
+      (batCapacity <= 80 ? "󰂊 " :
+      (batCapacity <= 90 ? "󰂋 " :
+      "󰂅 ")))))))))
+      }
+
+    )
+  )
+)

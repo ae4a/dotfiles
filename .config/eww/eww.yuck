@@ -1,4 +1,3 @@
-;;;; Including Window script, which calls everyone else
-(include "windows/windows.yuck")
-(include "widgets/power.yuck")
-
+(include "./yuck/windows/bar.yuck")
+(include "./yuck/windows/closer.yuck")
+(include "./yuck/windows/popups.yuck")

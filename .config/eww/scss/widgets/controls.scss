@@ -1,0 +1,60 @@
+// Audio
+.volume-button {
+  min-width: 20px;
+}
+
+.volume-button-label {
+  color: $purple;
+
+  min-width: 20px;
+}
+
+// Brightness
+
+.brightness-button {
+  padding-left: 5px;
+  padding-right: 1px;
+
+  min-width: 20px;
+}
+
+.brightness-button-label {
+  color: $yellow;
+}
+
+// Wifi
+.wifi-button {
+  min-width: 20px;
+}
+
+.wifi-button.disconnected {
+  padding-left: 5px;
+  padding-right: 1px;
+
+  min-width: 20px;
+}
+
+.wifi-button-label {
+  color: $cyan;
+
+  &.disconnected {
+    color: $red;
+  }
+}
+
+// Battery
+
+.battery-button {
+  padding-left: 8px;
+  padding-right: 8px;
+  min-width: 20px;
+
+  &.charging {
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+}
+
+.battery-button-label {
+  color: $green;
+}

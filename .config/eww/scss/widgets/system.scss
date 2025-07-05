@@ -1,0 +1,40 @@
+.system-value {
+  background-color: transparentize(white, 0.75);
+  color: $foreground;
+  margin-right: 10px;
+}
+
+.icon {
+  &.cpu {
+    margin: 3px;
+    font-size: 6px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+  }
+  &.mem {
+    font-size: 6px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+  }
+  &.battery {
+    font-size: 6px;
+    padding-left: 5px;
+    padding-bottom: 2px;
+  }
+
+  &.light {
+    padding-left: 10px;
+  }
+}
+
+.cpu {
+  color: $red;
+}
+
+.mem {
+  color: $yellow;
+}
+
+.battery {
+  color: $green;
+}

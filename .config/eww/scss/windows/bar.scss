@@ -1,0 +1,21 @@
+.bar_panel {
+  background-color: $dark-background;
+  border-radius: 6px;
+  margin: 10px;
+  margin-bottom: 10px;
+  padding: 3px;
+
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
+}
+
+.test {
+  background-color: $light-light-background;
+  color: $foreground;
+  margin-right: 10px;
+}
+
+.icon {
+  padding: 2px;
+  padding-left: 9px;
+  font-size: small;
+}
