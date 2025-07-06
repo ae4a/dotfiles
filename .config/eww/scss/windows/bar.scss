@@ -8,15 +8,8 @@
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.6);
 }
 
-.test {
-  background-color: $light-light-background;
-  color: $foreground;
-  margin-right: 10px;
+box.panel {
+  border: 2px solid $light-light-background;
+  border-radius: 4px;
+  padding: 0;
 }
-
-.icon {
-  padding: 2px;
-  padding-left: 9px;
-  font-size: small;
-}
-

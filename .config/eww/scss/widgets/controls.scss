@@ -58,3 +58,21 @@
 .battery-button-label {
   color: $green;
 }
+
+// Test
+
+@mixin small-button($color) {
+  margin: 0;
+
+  color: $color;
+  &:hover {
+    background-color: transparent;
+    .label {
+      color: mix($color, $foreground, 40%);
+    }
+  }
+}
+
+.test-button {
+  @include small-button($red);
+}

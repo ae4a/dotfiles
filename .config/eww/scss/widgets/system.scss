@@ -65,14 +65,14 @@
 }
 
 .sys_progress.cpu {
-  @include sysprogress($bgcolor: $red)
+  @include sysprogress($bgcolor: $red);
 }
 
 .sys_progress.mem {
-  @include sysprogress($bgcolor: $yellow)
+  @include sysprogress($bgcolor: $yellow);
 }
 
 .sys_progress.storage {
-  @include sysprogress($bgcolor: $cyan)
+  @include sysprogress($bgcolor: $cyan);
 }
 

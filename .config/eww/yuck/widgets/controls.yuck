@@ -95,3 +95,20 @@
     )
   )
 )
+
+; Test
+
+(defwidget test []
+  (button
+    :class "test-button"
+    :tooltip "TESTSTST"
+    (label
+      :class "test-button label"
+      :text " "
+    )
+  )
+)
+
+
+; (defvar bluetoothPower "off") ; on/off
+; (defvar bluetoothPower "off") ; on/off
