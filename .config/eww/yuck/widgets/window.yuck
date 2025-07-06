@@ -3,6 +3,11 @@
 (defwidget active_window []
   (box
     :class "active_window"
-    {get_active_window == "null" ? "" : get_active_window}
+    (label
+      :truncate true
+      :limit-width 100
+      :text {get_active_window == "null" ? "" : get_active_window}
+    )
+    
   )
 )
