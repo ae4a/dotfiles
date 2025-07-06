@@ -35,6 +35,44 @@
   color: $yellow;
 }
 
-.battery {
-  color: $green;
+// System progress
+.system-progress {
+  margin-left: 4px;
+  margin-right: 2px;
+  border: 2px solid $light-light-background;
+  border-radius: 4px;
+  padding-left: 1px;
 }
+
+@mixin sysprogress($bgcolor: $foregound) {
+  margin-right: 2px;
+  margin-left: 1px;
+  background-color: $light-light-background;
+  border-radius: 5px;
+  min-height: 17px;
+  trough {
+    border-radius: 5px;
+    min-height: 17px;
+    min-width:  4px;
+  }
+
+  progress {
+    border-radius: 4px;
+    background-color: $bgcolor;
+    min-height: 0;
+    min-width:  4px;
+  }
+}
+
+.sys_progress.cpu {
+  @include sysprogress($bgcolor: $red)
+}
+
+.sys_progress.mem {
+  @include sysprogress($bgcolor: $yellow)
+}
+
+.sys_progress.storage {
+  @include sysprogress($bgcolor: $cyan)
+}
+

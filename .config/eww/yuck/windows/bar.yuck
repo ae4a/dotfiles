@@ -28,12 +28,13 @@
       :space-evenly false
       :halign "end"
       ; Widgets
-      (system-info)
+      ;;(system-info)
       ; Based on position of controls their popups position also is needed to be adjusted at popups.yuck in geometry node
       (audio :monitor monitor-id)
       (brightness :monitor monitor-id)
       (wifi)
       (battery)
+      (system-progress-button)      
       (clock)
     )
   )
