@@ -1,12 +1,13 @@
 // Audio
 .volume-button {
-  min-width: 20px;
+  min-width: 10px;
+  padding-right: 0;
 }
 
 .volume-button-label {
   color: $purple;
 
-  min-width: 20px;
+  min-width: 10px;
 }
 
 // Brightness

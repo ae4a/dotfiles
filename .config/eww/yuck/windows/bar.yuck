@@ -33,12 +33,12 @@
       (brightness :monitor monitor-id)
       (wifi)
       (battery)
-      (box
-        :class "panel"
-        :orientation: "h"
-        :spacing "2px"
-        (test)
-      )
+      ; (box
+      ;   :class "panel"
+      ;   :orientation: "h"
+      ;   :spacing "2px"
+      ;   (test)
+      ; )
       (system-progress-button)      
       (clock)
     )
