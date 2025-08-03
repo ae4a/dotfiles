@@ -1,12 +1,13 @@
 // Audio
 .volume-button {
-  min-width: 20px;
+  min-width: 10px;
+  padding-right: 0;
 }
 
 .volume-button-label {
   color: $purple;
 
-  min-width: 20px;
+  min-width: 10px;
 }
 
 // Brightness
@@ -45,8 +46,8 @@
 // Battery
 
 .battery-button {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 3px;
+  padding-right: 3px;
   min-width: 20px;
 
   &.charging {
@@ -57,4 +58,22 @@
 
 .battery-button-label {
   color: $green;
+}
+
+// Test
+
+@mixin small-button($color) {
+  margin: 0;
+
+  color: $color;
+  &:hover {
+    background-color: transparent;
+    .label {
+      color: mix($color, $foreground, 40%);
+    }
+  }
+}
+
+.test-button {
+  @include small-button($red);
 }

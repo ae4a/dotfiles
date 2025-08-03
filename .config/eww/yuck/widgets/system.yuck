@@ -39,3 +39,43 @@
   )
 )
 
+; New version
+
+(defwidget system-progress [value css]
+  (progress
+    :class "sys_progress ${css}"
+    :value value
+    :valign "CENTER"
+    :halign "CENTER"
+    :orientation "v"
+    :flipped true
+  )
+)
+
+(defwidget system-progress-button []
+  (tooltip
+    (box
+      :orientation "v"
+      "CPU: ${round(EWW_CPU.avg, 0)}%"
+      "Memory: ${round(100*EWW_RAM.used_mem/EWW_RAM.total_mem, 0)}%"
+      "Storage: ${round(EWW_DISK["/"].used_perc, 0)}%"
+    )
+    (box
+      :class "system-progress"
+      (system-progress
+        :css "cpu"
+        :value {EWW_CPU.avg}
+      )
+      (system-progress
+        :css "mem"
+        :value {100*EWW_RAM.used_mem/EWW_RAM.total_mem}
+      )
+      (system-progress
+        :css "storage"
+        :value {EWW_DISK["/"].used_perc}
+
+      )
+    )
+  )
+)
+

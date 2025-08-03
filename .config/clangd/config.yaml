@@ -1,2 +1,4 @@
 Completion:
   ArgumentLists: Delimiters
+InlayHints:
+  Enabled: No
