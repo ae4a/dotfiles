@@ -100,3 +100,5 @@ alias l="eza -la --git -O --icons"
 alias lt="eza -la --git -T -O --icons -I .git"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval "$(zoxide init zsh)"
