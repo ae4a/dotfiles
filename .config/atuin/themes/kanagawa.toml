@@ -1,0 +1,10 @@
+[theme]
+name = "kanagawa"
+parent = "default"
+
+[colors]
+Base = "#DCD7BA" # Foreground
+AlertInfo = "#98bb6c" # Green
+AlertWarn = "#e6c384" # Yellow
+AlertError = "#ff5555" # Red
+Guidance = "#7fb4ca" # Blue

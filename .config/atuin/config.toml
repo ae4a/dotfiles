@@ -1,0 +1,47 @@
+style = "auto"
+auto_hide_height = 8
+show_preview = true
+show_help = true
+enter_accept = true
+
+[stats]
+# common_subcommands = [
+#   "apt",
+#   "cargo",
+#   "composer",
+#   "dnf",
+#   "docker",
+#   "git",
+#   "go",
+#   "ip",
+#   "jj",
+#   "kubectl",
+#   "nix",
+#   "nmcli",
+#   "npm",
+#   "pecl",
+#   "pnpm",
+#   "podman",
+#   "port",
+#   "systemctl",
+#   "tmux",
+#   "yarn",
+# ]
+
+# ignored_commands = [
+#   "cd",
+#   "ls",
+#   "vi"
+# ]
+
+[keys]
+
+[sync]
+records = true
+
+[preview]
+strategy = "auto"
+
+[theme]
+name = "kanagawa"
+
