@@ -1,0 +1,41 @@
+add_newline = false
+format = '($username$hostname )$directory$git_branch$git_status $character'
+
+palette = 'kanagawa'
+
+[palettes.kanagawa]
+white = '#dcd7ba'
+red = '#ff5555'
+green = '#98bb6c'
+yellow = '#e6c384'
+cyan = '#7fb4ca'
+blue = '#7E9CD8'
+purple = '#938aa9'
+
+[directory]
+home_symbol = "~"
+truncation_length = 8
+truncation_symbol = "…/"
+truncate_to_repo = false
+style="blue bold"
+
+[git_branch]
+format = '[$branch]($style)'
+style = 'yellow'
+
+[git_status]
+modified = "*"
+format = '[$modified$ahead_behind]($style)'
+style='yellow'
+
+[hostname]
+ssh_only = true
+format = '[@$hostname]($style)'
+style = 'white'
+
+[username]
+show_always = false
+format = '[$user]($style)'
+style_user = 'white'
+style_root = "red"
+
