@@ -10,7 +10,7 @@ export OMZ="$HOME/.oh-my-zsh"
 
 plugins=(
   git
-  zsh-autosuggestions
+  #zsh-autosuggestions
 )
 
 source $OMZ/oh-my-zsh.sh
@@ -24,12 +24,20 @@ export PATH=~/.npm-global/bin:$PATH
 # Alias
 alias l="eza -la --git -O --icons"
 alias lt="eza -la --git -T -O --icons -I .git"
+alias lg=lazygit
 alias v=nvim
+alias b=bluetui
+alias gemini-pro="GEMINI_MODEL=\"gemini-2.5-pro\" gemini"
+alias daily="mkdir -p ~/z/current/daily/$(date +%Y%m%d); cd ~/z/current/daily/$(date +%Y%m%d)" # Eazy access dirs for temp stuff
+
 
 # Modules
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# Fzf
+source <(fzf --zsh)
 
 # Atuin
 . "$HOME/.atuin/bin/env"
@@ -37,3 +45,5 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 #zprof
 # time zsh -i -c exit
+
+eval $(thefuck --alias)
