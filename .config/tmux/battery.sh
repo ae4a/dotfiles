@@ -11,4 +11,9 @@ elif [ "$P" -lt "80" ]; then
   ICON=" "
 fi
 
-echo "$ICON$P%"
+POWER_ICON=""
+if [ "$(upower -i $(upower -e | grep 'BAT') | grep state | awk '{print $2}')" == "charging" ]; then
+  POWER_ICON=" "
+fi
+
+echo "$POWER_ICON$ICON$P%"
