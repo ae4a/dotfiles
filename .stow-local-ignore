@@ -7,3 +7,11 @@ install.md
 readme.md
 LICENSE
 Makefile
+
+\.config/dunst
+\.config/eww
+\.config/hypr
+\.config/logid
+\.config/obsidian
+\.config/rofi
+\.config/waybar

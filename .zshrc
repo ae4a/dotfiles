@@ -5,15 +5,15 @@ export STARSHIP_CONFIG=~/.config/starship/config.toml
 eval "$(starship init zsh)"
 
 # OMZ
-zstyle ':omz:update' mode disabled  # disable auto updates
-export OMZ="$HOME/.oh-my-zsh"
+#zstyle ':omz:update' mode disabled  # disable auto updates
+#export OMZ="$HOME/.oh-my-zsh"
 
-plugins=(
-  git
-  #zsh-autosuggestions
-)
+#plugins=(
+#  git
+#  #zsh-autosuggestions
+#)
 
-source $OMZ/oh-my-zsh.sh
+#source $OMZ/oh-my-zsh.sh
 
 # Env
 # export LANG=en_US.UTF-8
@@ -40,10 +40,10 @@ eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 
 # Atuin
-. "$HOME/.atuin/bin/env"
+#. "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh --disable-up-arrow)"
 
 #zprof
 # time zsh -i -c exit
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
