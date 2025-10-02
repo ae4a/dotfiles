@@ -28,7 +28,8 @@ alias lg=lazygit
 alias v=nvim
 alias b=bluetui
 alias gemini-pro="GEMINI_MODEL=\"gemini-2.5-pro\" gemini"
-alias daily="mkdir -p ~/z/current/daily/$(date +%Y%m%d); cd ~/z/current/daily/$(date +%Y%m%d)" # Eazy access dirs for temp stuff
+DAILY_DIR="$HOME/.daily"
+alias daily="mkdir -p \"$DAILY_DIR/$(date +%Y%m%d)\"; cd \"$DAILY_DIR/$(date +%Y%m%d)\"" # Eazy access dirs for temp stuff
 
 
 # Modules
