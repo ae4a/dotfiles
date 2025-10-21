@@ -1,18 +1,22 @@
+# Font settings
+
+font-family = "JetBrains Mono"
 font-synthetic-style = true
 font-size = 15
-#shell-integration-features = no-cursor,sudo,no-title
-mouse-hide-while-typing = true
-#mouse-scroll-multiplier = 2
-#theme = catppuccin-mocha
-#window-decoration = false
+font-feature = -calt
+font-feature = -dlig
+font-feature = -liga
+
+# Window settings
+
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
 window-padding-color = background
 adjust-cell-height = -15%
+mouse-hide-while-typing = true
 
-#font-family = "JetBrains Mono"
-
+# Theme settings
 
 ## name: Kanagawa
 ## license: MIT
