@@ -19,19 +19,9 @@ eval "$(starship init zsh)"
 # export LANG=en_US.UTF-8
 CASE_SENSITIVE="true"
 export EDITOR='nvim'
-export PATH=~/.npm-global/bin:$PATH
+export PATH=~/.npm-global/bin:$(go env GOPATH)/bin:/Users/ae4/Library/Python/3.9/bin:$PATH
 
-# Alias
-alias l="eza -la --git -O --icons"
-alias lt="eza -la --git -T -O --icons -I .git"
-alias lg=lazygit
-alias v=nvim
-alias b=bluetui
-alias gemini-pro="GEMINI_MODEL=\"gemini-2.5-pro\" gemini"
-DAILY_DIR="$HOME/.daily"
-alias daily="mkdir -p \"$DAILY_DIR/$(date +%Y%m%d)\"; cd \"$DAILY_DIR/$(date +%Y%m%d)\"" # Eazy access dirs for temp stuff
-
-
+source ~/.config/scripts/aliases.sh
 # Modules
 
 # Zoxide
