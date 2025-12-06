@@ -1,36 +1,40 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#zmodload zsh/zprof
 
-export ZSH="$HOME/.oh-my-zsh"
+# Starship
+export STARSHIP_CONFIG=~/.config/starship/config.toml
+eval "$(starship init zsh)"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# OMZ
+#zstyle ':omz:update' mode disabled  # disable auto updates
+#export OMZ="$HOME/.oh-my-zsh"
 
-CASE_SENSITIVE="true"
-zstyle ':omz:update' mode disabled  # disable automatic updates
+#plugins=(
+#  git
+#  #zsh-autosuggestions
+#)
 
-plugins=(
-  git
-  branch
-)
+#source $OMZ/oh-my-zsh.sh
 
-source $ZSH/oh-my-zsh.sh
-
+# Env
 # export LANG=en_US.UTF-8
-
+CASE_SENSITIVE="true"
 export EDITOR='nvim'
+export PATH=~/.npm-global/bin:$(go env GOPATH)/bin:/Users/ae4/Library/Python/3.9/bin:$PATH
 
-alias l="eza -la --git -O --icons"
-alias lt="eza -la --git -T -O --icons -I .git"
-alias v=nvim
+source ~/.config/scripts/aliases.sh
+# Modules
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+# Zoxide
 eval "$(zoxide init zsh)"
 
-. "$HOME/.atuin/bin/env"
+# Fzf
+source <(fzf --zsh)
 
+# Atuin
+#. "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh --disable-up-arrow)"
+
+#zprof
+# time zsh -i -c exit
+
+#eval $(thefuck --alias)
