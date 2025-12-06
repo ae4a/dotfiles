@@ -9,12 +9,16 @@ font-feature = -liga
 
 # Window settings
 
+window-position-x = 200
+window-position-y = 200
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
 window-padding-color = background
 adjust-cell-height = -15%
 mouse-hide-while-typing = true
+
+mouse-scroll-multiplier = 0.5
 
 # Theme settings
 
