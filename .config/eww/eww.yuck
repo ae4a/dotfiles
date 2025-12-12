@@ -1,3 +1,0 @@
-(include "./yuck/windows/bar.yuck")
-(include "./yuck/windows/closer.yuck")
-(include "./yuck/windows/popups.yuck")

@@ -1,42 +1,14 @@
-My hyprland rice!
+# My mac dotfiles!
+Mostly terminal setup + some system settings.
 
-Now the main feature is my fully custom eww bar
+_but hyprland is in a separate branch!_
 
-# Main parts
-- hyprland
-- rofi
-- kitty, zsh
-- neovim
-- obsidian
+## Main stack
+- ghostty
+- tmux
 - zsh
+- neovim
 
-# Details
-## Color theme
-I use [Kanagawa](https://github.com/rebelot/kanagawa.nvim) in all places I could.
-## Eww
-I didn't like waybar because I wanted more flexebility and control. 
-I was looking for a good eww bar but the ones that I found either were not ideal or did not work.
-So I made my own. Now it is still in development. Special thanks to [Aylur](https://github.com/Aylur/dotfiles) and [Saimoomedits](https://github.com/Saimoomedits/eww-widgets)  What I am proud of are popups!!! now only for volume and brightness. 
-
-So now it has:
-- workspaces
-- active window
-- system info(cpu, ram)
-- volume
-- brightness
-- wifi
-- battery
-- clock
-
-I am planning to add:
-- bluetooth
-- vpn
-- maybe player
-- quick settings or control center menu
-- powermenu
-- lock pause
-
-### Requirements
-- pipewire(pactl, wpctl)
-- networkManager
-- brightnessctl
+## Details
+### Color theme
+[Kanagawa](https://github.com/rebelot/kanagawa.nvim) every where I could use it.
