@@ -7,6 +7,7 @@ install.md
 readme.md
 LICENSE
 Makefile
+media
 
 \.config/dunst
 \.config/eww

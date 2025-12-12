@@ -2,5 +2,7 @@
 **/lazy-lock.json
 **/.vscode/
 
+.DS_Store
+
 .config/hypr/monitor.conf
 
