@@ -8,3 +8,4 @@
 
 .gitsecret/keys/random_seed
 !*.secret
+.config/scripts/pg_aliases.sh
