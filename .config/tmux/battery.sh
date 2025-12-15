@@ -4,7 +4,7 @@
 
 P="??"
 
-if [ "$(uname)" = "Darwin" ]; then 
+if [ "$(uname)" = "Darwin" ]; then
   P="$(pmset -g batt | grep % | awk '{print $3}' | tr -d "%;")"
 elif [ "$(uname)" = "Linux" ]; then
   P="$(upower -i $(upower -e | grep 'BAT') | grep 'percentage' | awk '{print $2}' | tr -d "%" )"
@@ -23,7 +23,7 @@ fi
 
 POWER_ICON=""
 
-if [ "$(uname)" = "Darwin" ]; then 
+if [ "$(uname)" = "Darwin" ]; then
   if [ "$(pmset -g batt | grep discharging | wc -l | tr -d " ")" == "0" ]; then
     POWER_ICON=" "
   fi

@@ -13,7 +13,7 @@ alias gemini-pro="GEMINI_MODEL=\"gemini-2.5-pro\" gemini"
 
 cpr() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
-} 
+}
 
 mvr() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
@@ -41,5 +41,5 @@ DAILY_DIR="$HOME/.daily"
 
 daily() {
   mkdir -p "$DAILY_DIR/$(date +%Y%m%d)"
-  cd "$DAILY_DIR/$(date +%Y%m%d)" 
+  cd "$DAILY_DIR/$(date +%Y%m%d)"
 }
