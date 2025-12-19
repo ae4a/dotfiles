@@ -41,3 +41,14 @@ eval "$(atuin init zsh --disable-up-arrow)"
 #  zstyle ':completion:*:ssh:*' hosts $h
 #  zstyle ':completion:*:slogin:*' hosts $h
 #fi
+
+# Pet
+
+function pet-select() {
+  BUFFER=$(pet search --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle redisplay
+}
+zle -N pet-select
+stty -ixon
+bindkey '^p' pet-select

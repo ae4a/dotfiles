@@ -37,7 +37,7 @@ backupr() {
 # Daily
 # Eazy access dirs for temp stuff
 
-DAILY_DIR="$HOME/.daily"
+DAILY_DIR="$HOME/daily"
 
 daily() {
   mkdir -p "$DAILY_DIR/$(date +%Y%m%d)"
