@@ -1,0 +1,12 @@
+gui:
+  tabWidth: 2
+  showRootItemInFileTree: false
+  showNumstatInFilesView: true
+  showRandomTip: false
+  statusPanelView: allBranchesLog
+
+git:
+  overrideGpg: true
+  allBranchesLogCmds:
+    -  git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=oneline
+

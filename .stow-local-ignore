@@ -1,6 +1,7 @@
 \.git
 \.gitignore
 \.gitmodules
+\.DS_Store
 
 install.sh
 install.md

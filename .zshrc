@@ -13,6 +13,7 @@ eval "$(starship init zsh)"
 CASE_SENSITIVE="true"
 export EDITOR='nvim'
 export PATH=~/.npm-global/bin:$(go env GOPATH)/bin:/Users/ae4/Library/Python/3.9/bin:$PATH
+export XDG_CONFIG_HOME="$HOME/.config" # For lazygit
 
 source ~/.config/scripts/aliases.sh
 [ -f ~/.config/scripts/pg_aliases.sh ] && source ~/.config/scripts/pg_aliases.sh
@@ -64,6 +65,7 @@ source <(fzf --zsh)
 eval "$(atuin init zsh --disable-up-arrow)"
 
 # ****************** DEBUG ******************
+
 
 # zprof
 # time zsh -i -c exit
