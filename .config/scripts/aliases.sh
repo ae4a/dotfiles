@@ -6,8 +6,17 @@ alias l="eza -la --git -O --icons"
 alias lt="eza -la --git -T -O --icons -I .git"
 alias lg=lazygit
 alias v=nvim
-alias b=bluetui
 alias gemini-pro="GEMINI_MODEL=\"gemini-2.5-pro\" gemini"
+
+# Daily
+# Eazy access dirs for temp stuff
+
+DAILY_DIR="$HOME/daily"
+
+daily() {
+  mkdir -p "$DAILY_DIR/$(date +%Y%m%d)"
+  cd "$DAILY_DIR/$(date +%Y%m%d)"
+}
 
 # Rsync
 
@@ -31,15 +40,6 @@ gethostname() {
 
 backupr() {
   ssh homeserver "mkdir -p ~/backup/$(gethostname)/$(whoami)"
-  rsync -a --delete --quiet -e ssh --exclude '.cache' $HOME/dev $HOME/.daily homeserver:backup/$(gethostname)/$(whoami)
+  rsync -a --delete --quiet -e ssh --exclude '.cache' $HOME/dev $DAILY_DIR homeserver:backup/$(gethostname)/$(whoami)
 }
 
-# Daily
-# Eazy access dirs for temp stuff
-
-DAILY_DIR="$HOME/daily"
-
-daily() {
-  mkdir -p "$DAILY_DIR/$(date +%Y%m%d)"
-  cd "$DAILY_DIR/$(date +%Y%m%d)"
-}
