@@ -1,0 +1,17 @@
+repos:
+  # - repo: https://github.com/trufflesecurity/trufflehog
+  #   rev: v3.75.4  # Check latest release
+  #   hooks:
+  #     - id: trufflehog-filesystem
+  #       args: [--no-verification, --fail-on-result]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    - id: trailing-whitespace
+  - repo: local
+    hooks:
+    - id: git-secret-hide
+      name: Hide git secrets
+      entry: sh -c "git secret hide && git add *.secret"
+      language: system
+      pass_filenames: false

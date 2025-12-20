@@ -38,4 +38,3 @@ show_always = false
 format = '[$user]($style)'
 style_user = 'white'
 style_root = "red"
-

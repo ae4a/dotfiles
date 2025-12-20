@@ -1,12 +1,14 @@
 \.git
 \.gitignore
 \.gitmodules
+\.DS_Store
 
 install.sh
 install.md
 readme.md
 LICENSE
 Makefile
+media
 
 \.config/dunst
 \.config/eww
