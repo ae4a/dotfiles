@@ -12,7 +12,7 @@ eval "$(starship init zsh)"
 # export LANG=en_US.UTF-8
 CASE_SENSITIVE="true"
 export EDITOR='nvim'
-export PATH=~/.npm-global/bin:$(go env GOPATH)/bin:/Users/ae4/Library/Python/3.9/bin:$PATH
+export PATH=$HOME/.npm-global/bin:$(go env GOPATH)/bin:/Users/ae4/Library/Python/3.9/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config" # For lazygit
 
 source ~/.config/scripts/aliases.sh

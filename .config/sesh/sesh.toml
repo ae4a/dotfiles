@@ -1,0 +1,17 @@
+[[session]]
+name = "dotfiles"
+path = "~/dotfiles"
+startup_command = "tmux rename-window \"dofiles\"; tmux new-window -dn nvim \"cd .config/nvim; nvim .\"; cd FemaServer; nvim ."
+
+[[session]]
+name = "fema"
+path = "~/dev/work/krbl/fema"
+startup_command = "tmux rename-window \"server\"; tmux new-window -dn client \"cd FemaServer/tests/deviceGateway/client; nvim .\"; tmux new-window -dn tests \"cd FemaTests; nvim .\"; cd FemaServer; nvim ."
+
+[[session]]
+name = "go-refs"
+path = "~/dev/third_party/go-references"
+
+[[session]]
+name = "misc"
+path = "~"
