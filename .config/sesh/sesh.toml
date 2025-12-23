@@ -1,7 +1,7 @@
 [[session]]
 name = "dotfiles"
 path = "~/dotfiles"
-startup_command = "tmux rename-window \"dofiles\"; tmux new-window -dn nvim \"cd .config/nvim; nvim .\"; cd FemaServer; nvim ."
+startup_command = "tmux rename-window \"dofiles\"; tmux new-window -dn nvim \"cd .config/nvim; nvim .\"; nvim ."
 
 [[session]]
 name = "fema"
@@ -15,3 +15,13 @@ path = "~/dev/third_party/go-references"
 [[session]]
 name = "misc"
 path = "~"
+
+[[session]]
+name = "polygon"
+startup_command = "ssh polygon"
+
+[[session]]
+name = "daily"
+path = "~/daily"
+startup_command = "daily; nvim ."
+
