@@ -18,6 +18,7 @@ export XDG_CONFIG_HOME="$HOME/.config" # For lazygit
 source ~/.config/scripts/aliases.sh
 [ -f ~/.config/scripts/pg_aliases.sh ] && source ~/.config/scripts/pg_aliases.sh
 
+setopt AUTO_CD
 
 # ****************** Auto completion ******************
 
@@ -63,6 +64,9 @@ source <(fzf --zsh)
 # Atuin
 #. "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh --disable-up-arrow)"
+
+# Remove vi mode
+bindkey -e
 
 # ****************** DEBUG ******************
 
