@@ -26,5 +26,9 @@ path = "~/daily"
 startup_command = "daily; nvim ."
 
 [[session]]
+name = "tmp"
+startup_command = "tmux rename-session \"tmp$(sesh list -t | grep 'tmp\\d' | wc -l | xargs)\"; clear"
+
+[[session]]
 name = "new"
-startup_command = "tmux rename-session \"tmp$(sesh list -t | grep tmp | wc -l | xargs)\"; clear"
+startup_command = "tmux command-prompt -p 'New session name:' \"rename-session '%%'\"; clear"

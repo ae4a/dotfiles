@@ -53,7 +53,6 @@ function pet-select() {
 }
 zle -N pet-select
 stty -ixon
-bindkey '^p' pet-select
 
 # Zoxide
 eval "$(zoxide init zsh)"
@@ -67,6 +66,7 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 # Remove vi mode
 bindkey -e
+bindkey '^p' pet-select
 
 # ****************** DEBUG ******************
 
