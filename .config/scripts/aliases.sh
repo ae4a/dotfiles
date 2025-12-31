@@ -2,11 +2,17 @@
 
 # Misc
 
-alias l="eza -la --git -O --icons"
+alias l="eza -la --group-directories-first --git -O --icons"
 alias lt="eza -la --git -T -O --icons -I .git"
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias lg=lazygit
-alias v=nvim
+alias ld=lazydocker
+alias n=nvim
 alias gemini-pro="GEMINI_MODEL=\"gemini-2.5-pro\" gemini"
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 # Daily
 # Eazy access dirs for temp stuff

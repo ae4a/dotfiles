@@ -1,4 +1,5 @@
 # Font settings
+command = /usr/bin/zsh
 
 font-family = "JetBrains Mono"
 font-synthetic-style = true
