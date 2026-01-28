@@ -17,6 +17,11 @@ name = "misc"
 path = "~"
 
 [[session]]
+name = "obsidian"
+path = "~/obsidian/ae4"
+startup_command = "nvim ."
+
+[[session]]
 name = "polygon"
 startup_command = "ssh polygon"
 
