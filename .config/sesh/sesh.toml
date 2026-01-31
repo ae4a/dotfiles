@@ -1,12 +1,32 @@
+# Dotfiles
+
 [[session]]
 name = "dotfiles"
 path = "~/dotfiles"
-startup_command = "tmux rename-window \"dofiles\"; tmux new-window -dn nvim \"cd .config/nvim; nvim .\"; nvim ."
+windows = [ "nvim" ]
+startup_command = "nvim ."
+
+[[window]]
+name = "nvim"
+startup_script = "cd .config/nvim; nvim ."
+
+# Fema
 
 [[session]]
 name = "fema"
 path = "~/dev/work/krbl/fema"
-startup_command = "tmux rename-window \"server\"; tmux new-window -dn client \"cd FemaServer/tests/deviceGateway/client; nvim .\"; tmux new-window -dn tests \"cd FemaTests; nvim .\"; cd FemaServer; nvim ."
+windows = [ "protocol", "tests" ]
+startup_command = "tmux rename-window \"server\"; cd FemaServer; nvim ."
+
+[[window]]
+name = "protocol"
+startup_script = "cd FemaProtocol; nvim ."
+
+[[window]]
+name = "tests"
+startup_script = "cd FemaTests; nvim ."
+
+# Other
 
 [[session]]
 name = "go-refs"
@@ -30,9 +50,13 @@ name = "daily"
 path = "~/daily"
 startup_command = "daily; nvim ."
 
+# Tmp - creates new session with autoincrementing number
+
 [[session]]
 name = "tmp"
 startup_command = "tmux rename-session \"tmp$(sesh list -t | grep 'tmp\\d' | wc -l | xargs)\"; clear"
+
+# New creates new session and give you name it
 
 [[session]]
 name = "new"
