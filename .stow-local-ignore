@@ -17,3 +17,8 @@ media
 \.config/obsidian
 \.config/rofi
 \.config/waybar
+
+# Git secret files
+
+.gitsecret
+.*\.secret
