@@ -49,13 +49,3 @@ backupr() {
   rsync -a --delete --quiet -e ssh --exclude '.cache' $HOME/dev $DAILY_DIR homeserver:backup/$(gethostname)/$(whoami)
 }
 
-# Sends me notification
-ntfy() {
-  if [ "$(defaults read com.user.toggle NtfyAlertsActive 2>/dev/null)" = "1" ]; then
-    if [ "$1" = "docker" ]; then
-      curl -s -u "$NTFY_LOGIN:$NTFY_PASSWD" -H "Title: Docker" -d "$2" "$NTFY_URL/docker-alerts" > /dev/null
-    else
-      echo "invalid notification"
-    fi
-  fi
-}
