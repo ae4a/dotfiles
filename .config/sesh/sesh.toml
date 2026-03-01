@@ -26,6 +26,24 @@ startup_script = "cd FemaProtocol; nvim ."
 name = "tests"
 startup_script = "cd FemaTests; nvim ."
 
+# SSH
+
+[[session]]
+name = "ssh"
+windows = [ "polygon", "mys", "ekb", "ml" ]
+
+[[window]]
+name = "polygon"
+
+[[window]]
+name = "mys"
+
+[[window]]
+name = "ekb"
+
+[[window]]
+name = "ml"
+
 # Other
 
 [[session]]
@@ -41,9 +59,6 @@ name = "obsidian"
 path = "~/obsidian/ae4"
 startup_command = "nvim ."
 
-[[session]]
-name = "polygon"
-startup_command = "ssh polygon"
 
 [[session]]
 name = "daily"
