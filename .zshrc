@@ -15,6 +15,10 @@ export EDITOR='nvim'
 export PATH=$HOME/.local/bin:$HOME/.npm-global/bin:$(go env GOPATH)/bin:/Users/ae4/Library/Python/3.9/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config" # For lazygit
 
+hash -d ...=../..
+hash -d ....=../../..
+hash -d .....=../../../..
+
 source ~/.env
 source ~/.config/scripts/aliases.sh
 [ -f ~/.config/scripts/pg_aliases.sh ] && source ~/.config/scripts/pg_aliases.sh

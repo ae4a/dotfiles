@@ -4,6 +4,7 @@ gui:
   showNumstatInFilesView: true
   showRandomTip: false
   statusPanelView: allBranchesLog
+  expandFocusedSidePanel: true
 
 git:
   overrideGpg: true

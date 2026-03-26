@@ -6,6 +6,6 @@ if [ "$(defaults read com.user.toggle NtfyAlertsActive 2>/dev/null)" = "1" ]; th
   if [ "$1" = "docker" ]; then
     curl -s -u "$NTFY_LOGIN:$NTFY_PASSWD" -H "Title: Docker" -d "$2" "$NTFY_URL/docker-alerts" > /dev/null
   else
-    echo "invalid notification"
+    curl -s -u "$NTFY_LOGIN:$NTFY_PASSWD" -H "Title: Ready" -d "!!!" "$NTFY_URL/docker-alerts" > /dev/null
   fi
 fi

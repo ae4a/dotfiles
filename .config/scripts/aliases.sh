@@ -9,10 +9,9 @@ alias lg=lazygit
 alias ld=lazydocker
 alias n=nvim
 alias gemini-pro="GEMINI_MODEL=\"gemini-2.5-pro\" gemini"
-
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+alias mp=multipass
+alias ap=ansible-playbook
+alias oc=opencode
 
 # Daily
 # Eazy access dirs for temp stuff
