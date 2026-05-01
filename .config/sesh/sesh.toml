@@ -30,10 +30,8 @@ startup_script = "cd FemaTests; nvim ."
 
 [[session]]
 name = "ssh"
-windows = [ "polygon", "mys", "ekb", "ml" ]
-
-[[window]]
-name = "polygon"
+startup_command = "tmux rename-window \"polygon\"; clear"
+windows = [ "mys", "ekb", "ml" ]
 
 [[window]]
 name = "mys"
