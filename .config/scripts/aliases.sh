@@ -12,6 +12,12 @@ alias gemini-pro="GEMINI_MODEL=\"gemini-2.5-pro\" gemini"
 alias mp=multipass
 alias ap=ansible-playbook
 alias oc=opencode
+alias gc="git clone"
+alias gc1="git clone --depth=1"
+
+hash -d ...=../..
+hash -d ....=../../..
+hash -d .....=../../../..
 
 # Daily
 # Eazy access dirs for temp stuff

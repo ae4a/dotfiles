@@ -14,3 +14,7 @@ _but hyprland is in a separate branch!_
 ## Details
 ### Color theme
 [Kanagawa](https://github.com/rebelot/kanagawa.nvim) every where I could use it.
+
+# TODOs
+- add internet to tmux bar
+
