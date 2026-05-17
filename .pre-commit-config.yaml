@@ -4,6 +4,10 @@ repos:
   #   hooks:
   #     - id: trufflehog-filesystem
   #       args: [--no-verification, --fail-on-result]
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:

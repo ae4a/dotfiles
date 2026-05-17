@@ -10,3 +10,4 @@
 !*.secret
 .wakatime.cfg
 .env
+.config/git/creds.gitconfig

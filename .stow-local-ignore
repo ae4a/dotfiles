@@ -1,6 +1,7 @@
 \.git
 \.gitignore
 \.gitmodules
+\.gitsecret
 \.DS_Store
 
 install.sh
@@ -20,5 +21,4 @@ media
 
 # Git secret files
 
-.gitsecret
 .*\.secret
